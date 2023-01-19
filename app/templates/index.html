@@ -51,6 +51,36 @@
           var entity = document.getElementById("sounde1");
           entity.components.sound.playSound();
         }
+        
+        if (markerId=="marker6")
+        {
+          var entity = document.getElementById("soundf1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker7")
+        {
+          var entity = document.getElementById("soundg1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker8")
+        {
+          var entity = document.getElementById("soundh1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker9")
+        {
+          var entity = document.getElementById("soundi1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker10")
+        {
+          var entity = document.getElementById("soundj1");
+          entity.components.sound.playSound();
+        }
 
        
             
@@ -98,6 +128,12 @@
       <audio id="sound_c" src="static/sound/c.mp3" preload="auto" crossorigin="anonymous"></audio>
       <audio id="sound_d" src="static/sound/d.mp3" preload="auto" crossorigin="anonymous"></audio>
       <audio id="sound_e" src="static/sound/e.mp3" preload="auto" crossorigin="anonymous"></audio>
+      <audio id="sound_f" src="static/sound/f.mp3" preload="auto" crossorigin="anonymous"></audio>
+      <audio id="sound_g" src="static/sound/g.mp3" preload="auto" crossorigin="anonymous"></audio>
+      <audio id="sound_h" src="static/sound/h.mp3" preload="auto" crossorigin="anonymous"></audio>
+      <audio id="sound_i" src="static/sound/i.mp3" preload="auto" crossorigin="anonymous"></audio>
+      <audio id="sound_j" src="static/sound/j.mp3" preload="auto" crossorigin="anonymous"></audio>
+      
      
     </a-assets>
 
@@ -146,6 +182,46 @@
    smoothThreshold="5"
    minConfidence = "0.99">
     <a-image  id="desc" src="#s_e" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+    
+    <a-marker id="marker6" markerhandler type="pattern" url="static/pattern/pattern-small_f.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_f" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker7" markerhandler type="pattern" url="static/pattern/pattern-small_g.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = ".99">
+    <a-image  id="desc" src="#s_g" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker8" markerhandler type="pattern" url="static/pattern/pattern-small_h.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_h" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker9" markerhandler type="pattern" url="static/pattern/pattern-small_i.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_i" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker10" markerhandler type="pattern" url="static/pattern/pattern-small_j.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_j" rotation="-90 0 0" position="0 0 -2.5"></a-image>
    </a-marker>
 
    
