@@ -1,65 +1,499 @@
-<!DOCTYPE html>
+<!doctype HTML>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>360&deg; Image Gallery</title>
-    <meta name="description" content="360&deg; Image Gallery - A-Frame">
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-event-set-component@5/dist/aframe-event-set-component.min.js"></script>
-    <script src="https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js"></script>
-    <script src="https://unpkg.com/aframe-template-component@3.2.1/dist/aframe-template-component.min.js"></script>
-    <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.js"></script>
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">  
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+<script>
+  AFRAME.registerComponent('markerhandler', {
+    init: function () {
+      this.el.addEventListener('markerFound', () => {
+        var markerId = this.el.id;
+        console.log(markerId)
+        if (markerId=="marker1")
+        {
+           var entity = document.getElementById("sounda1");
+            entity.components.sound.playSound();
+        }
+        if (markerId=="marker2")
+        {
+          var entity = document.getElementById("soundb1");
+            entity.components.sound.playSound();
+        }
+        if (markerId=="marker3")
+        {
+          var entity = document.getElementById("soundc1");
+            entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker4")
+        {
+          var entity = document.getElementById("soundd1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker5")
+        {
+          var entity = document.getElementById("sounde1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker6")
+        {
+          var entity = document.getElementById("soundf1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker7")
+        {
+          var entity = document.getElementById("soundg1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker8")
+        {
+          var entity = document.getElementById("soundh1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker9")
+        {
+          var entity = document.getElementById("soundi1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker10")
+        {
+          var entity = document.getElementById("soundj1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker11")
+        {
+          var entity = document.getElementById("soundk1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker12")
+        {
+          var entity = document.getElementById("soundl1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker13")
+        {
+          var entity = document.getElementById("soundm1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker14")
+        {
+          var entity = document.getElementById("soundn1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker15")
+        {
+          var entity = document.getElementById("soundo1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker16")
+        {
+          var entity = document.getElementById("soundp1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker17")
+        {
+          var entity = document.getElementById("soundq1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker18")
+        {
+          var entity = document.getElementById("soundr1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker19")
+        {
+          var entity = document.getElementById("sounds1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker20")
+        {
+          var entity = document.getElementById("soundt1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker21")
+        {
+          var entity = document.getElementById("soundu1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker22")
+        {
+          var entity = document.getElementById("soundv1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker23")
+        {
+          var entity = document.getElementById("soundw1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker24")
+        {
+          var entity = document.getElementById("soundx1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker25")
+        {
+          var entity = document.getElementById("soundy1");
+          entity.components.sound.playSound();
+        }
+
+        if (markerId=="marker26")
+        {
+          var entity = document.getElementById("soundz1");
+          entity.components.sound.playSound();
+        }
+            
+      })
+    }
+  });
+</script>
+<body style="margin: 0px; overflow: hidden;">
+   
+  <a-scene
+  vr-mode-ui="enabled: false;"
+  renderer="logarithmicDepthBuffer: true;"
+  embedded
+  arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+
+    <a-assets>
+      <a-asset-item id="fox" src="static/Fox.gltf"></a-asset-item>
+      <img id="apple" src="static/apple.png" />
+      <img id="ant" src="static/ant.png" />
+      <img id="bag" src="static/bag.png" />
+      <img id="bus" src="static/bus.png" />
+      <img id="s_a" src="static/pic_letter/s_a.png" />
+      <img id="s_b" src="static/pic_letter/s_b.png" />
+      <img id="s_c" src="static/pic_letter/s_c.png" />
+      <img id="s_d" src="static/pic_letter/s_d.png" />
+      <img id="s_e" src="static/pic_letter/s_e.png" />
+      <img id="s_f" src="static/pic_letter/s_f.png" />
+      <img id="s_g" src="static/pic_letter/s_g.png" />
+      <img id="s_h" src="static/pic_letter/s_h.png" />
+      <img id="s_i" src="static/pic_letter/s_i.png" />
+      <img id="s_j" src="static/pic_letter/s_j.png" />
+      <img id="s_k" src="static/pic_letter/s_k.png" />
+      <img id="s_l" src="static/pic_letter/s_l.png" />
+      <img id="s_m" src="static/pic_letter/s_m.png" />
+      <img id="s_n" src="static/pic_letter/s_n.png" />
+      <img id="s_o" src="static/pic_letter/s_o.png" />
+      <img id="s_p" src="static/pic_letter/s_p.png" />
+      <img id="s_q" src="static/pic_letter/s_q.png" />
+      <img id="s_r" src="static/pic_letter/s_r.png" />
+      <img id="s_s" src="static/pic_letter/s_s.png" />
+      <img id="s_t" src="static/pic_letter/s_t.png" />
+      <img id="s_u" src="static/pic_letter/s_u.png" />
+      <img id="s_v" src="static/pic_letter/s_v.png" />
+      <img id="s_w" src="static/pic_letter/s_w.png" />
+      <img id="s_x" src="static/pic_letter/s_x.png" />
+      <img id="s_y" src="static/pic_letter/s_y.png" />
+      <img id="s_z" src="static/pic_letter/s_z.png" />
+      <audio id="sound_a" src="static/sound/a.mp3" preload="auto"></audio>
+      <audio id="sound_b" src="static/sound/b.mp3" preload="auto"></audio>
+      <audio id="sound_c" src="static/sound/c.mp3" preload="auto"></audio>
+      <audio id="sound_d" src="static/sound/d.mp3" preload="auto"></audio>
+      <audio id="sound_e" src="static/sound/e.mp3" preload="auto"></audio>
+      <audio id="sound_f" src="static/sound/f.mp3" preload="auto"></audio>
+      <audio id="sound_g" src="static/sound/g.mp3" preload="auto"></audio>
+      <audio id="sound_h" src="static/sound/h.mp3" preload="auto"></audio>
+      <audio id="sound_i" src="static/sound/i.mp3" preload="auto"></audio>
+      <audio id="sound_j" src="static/sound/j.mp3" preload="auto"></audio>
+      <audio id="sound_k" src="static/sound/k.mp3" preload="auto"></audio>
+      <audio id="sound_l" src="static/sound/l.mp3" preload="auto"></audio>
+      <audio id="sound_m" src="static/sound/m.mp3" preload="auto"></audio>
+      <audio id="sound_n" src="static/sound/n.mp3" preload="auto"></audio>
+      <audio id="sound_o" src="static/sound/o.mp3" preload="auto"></audio>
+      <audio id="sound_p" src="static/sound/p.mp3" preload="auto"></audio>
+      <audio id="sound_q" src="static/sound/q.mp3" preload="auto"></audio>
+      <audio id="sound_r" src="static/sound/r.mp3" preload="auto"></audio>
+      <audio id="sound_s" src="static/sound/s.mp3" preload="auto"></audio>
+      <audio id="sound_t" src="static/sound/t.mp3" preload="auto"></audio>
+      <audio id="sound_u" src="static/sound/u.mp3" preload="auto"></audio>
+      <audio id="sound_v" src="static/sound/v.mp3" preload="auto"></audio>
+      <audio id="sound_w" src="static/sound/w.mp3" preload="auto"></audio>
+      <audio id="sound_x" src="static/sound/x.mp3" preload="auto"></audio>
+      <audio id="sound_y" src="static/sound/y.mp3" preload="auto"></audio>
+      <audio id="sound_z" src="static/sound/z.mp3" preload="auto"></audio>
+      <audio id="sound_ant" src="static/sound/ant.mp3" preload="auto"></audio>
+      <audio id="sound_apple" src="static/sound/apple.mp3" preload="auto"></audio>
+      <audio id="sound_bag" src="static/sound/bag.mp3" preload="auto"></audio>
+      <audio id="sound_bus" src="static/sound/bus.mp3" preload="auto"></audio>
+    </a-assets>
+
+    <a-entity sound="src: #sound_a" id="sounda1"></a-entity>
+    <a-entity sound="src: #sound_ant" id="sounda2"></a-entity>
+    <a-entity sound="src: #sound_apple" id="sounda3"></a-entity>
+    <a-entity sound="src: #sound_b" id="soundb1"></a-entity>
+    <a-entity sound="src: #sound_c" id="soundc1"></a-entity>
+    <a-entity sound="src: #sound_d" id="soundd1"></a-entity>
+    <a-entity sound="src: #sound_e" id="sounde1"></a-entity>
+    <a-entity sound="src: #sound_f" id="soundf1"></a-entity>
+    <a-entity sound="src: #sound_g" id="soundg1"></a-entity>
+    <a-entity sound="src: #sound_h" id="soundh1"></a-entity>
+    <a-entity sound="src: #sound_i" id="soundi1"></a-entity>
+    <a-entity sound="src: #sound_j" id="soundj1"></a-entity>
+    <a-entity sound="src: #sound_k" id="soundk1"></a-entity>
+    <a-entity sound="src: #sound_l" id="soundl1"></a-entity>
+    <a-entity sound="src: #sound_m" id="soundm1"></a-entity>
+    <a-entity sound="src: #sound_n" id="soundn1"></a-entity>
+    <a-entity sound="src: #sound_o" id="soundo1"></a-entity>
+    <a-entity sound="src: #sound_p" id="soundp1"></a-entity>
+    <a-entity sound="src: #sound_q" id="soundq1"></a-entity>
+    <a-entity sound="src: #sound_r" id="soundr1"></a-entity>
+    <a-entity sound="src: #sound_s" id="sounds1"></a-entity>
+    <a-entity sound="src: #sound_t" id="soundt1"></a-entity>
+    <a-entity sound="src: #sound_u" id="soundu1"></a-entity>
+    <a-entity sound="src: #sound_v" id="soundv1"></a-entity>
+    <a-entity sound="src: #sound_w" id="soundw1"></a-entity>
+    <a-entity sound="src: #sound_x" id="soundx1"></a-entity>
+    <a-entity sound="src: #sound_y" id="soundy1"></a-entity>
+    <a-entity sound="src: #sound_z" id="soundz1"></a-entity>
+
+    <a-marker id="marker1" markerhandler type="pattern" url="static/pattern/pattern-small_a.patt" smooth="true"
+    smoothCount="10"
+    smoothTolerance=".10"
+    smoothThreshold="5"
+    minConfidence = "0.99">
+      <a-image  id="desc" src="#s_a" rotation="90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker2" markerhandler type="pattern" url="static/pattern/pattern-small_b.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_b" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker3" markerhandler type="pattern" url="static/pattern/pattern-small_c.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_c" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker4" markerhandler type="pattern" url="static/pattern/pattern-small_d.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_d" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker5" markerhandler type="pattern" url="static/pattern/pattern-small_e.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_e" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker6" markerhandler type="pattern" url="static/pattern/pattern-small_f.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_f" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker7" markerhandler type="pattern" url="static/pattern/pattern-small_g.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = ".99">
+    <a-image  id="desc" src="#s_g" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker8" markerhandler type="pattern" url="static/pattern/pattern-small_h.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_h" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker9" markerhandler type="pattern" url="static/pattern/pattern-small_i.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_i" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker10" markerhandler type="pattern" url="static/pattern/pattern-small_j.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_j" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker11" markerhandler type="pattern" url="static/pattern/pattern-small_k.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_k" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker12" markerhandler type="pattern" url="static/pattern/pattern-small_l.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_l" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker13" markerhandler type="pattern" url="static/pattern/pattern-small_m.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_m" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker14" markerhandler type="pattern" url="static/pattern/pattern-small_n.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_n" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker15" markerhandler type="pattern" url="static/pattern/pattern-small_o.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_o" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker16" markerhandler type="pattern" url="static/pattern/pattern-small_p.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_p" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker17" markerhandler type="pattern" url="static/pattern/pattern-small_q.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_q" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker18" markerhandler type="pattern" url="static/pattern/pattern-small_r.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_r" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker19" markerhandler type="pattern" url="static/pattern/pattern-small_s.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_s" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker20" markerhandler type="pattern" url="static/pattern/pattern-small_t.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_t" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker21" markerhandler type="pattern" url="static/pattern/pattern-small_u.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_u" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker22" markerhandler type="pattern" url="static/pattern/pattern-small_v.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_v" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker23" markerhandler type="pattern" url="static/pattern/pattern-small_w.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_w" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker24" markerhandler type="pattern" url="static/pattern/pattern-small_x.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_x" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker25" markerhandler type="pattern" url="static/pattern/pattern-small_y.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_y" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+   <a-marker id="marker26" markerhandler type="pattern" url="static/pattern/pattern-small_z.patt" smooth="true"
+   smoothCount="10"
+   smoothTolerance=".10"
+   smoothThreshold="5"
+   minConfidence = "0.99">
+    <a-image  id="desc" src="#s_z" rotation="-90 0 0" position="0 0 -2.5"></a-image>
+   </a-marker>
+
+  
+   <a-nft
+   type="nft"
+   url="nft/small_a"
+   smooth="true"
+   smoothCount="10"
+   smoothTolerance=".01"
+   smoothThreshold="5"
+ >
+   <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
+   <a-entity>
+      <a-image  id="desc" src="#s_a" rotation="90 0 0" position="0 0 -2.5"></a-image>
+   </a-entity>
+ </a-nft>
+  <a-entity camera></a-entity>
     
-    <!-- Image link template to be reused. -->
-    <script id="link" type="text/html">
-      <a-entity class="link"
-        geometry="primitive: plane; height: 1; width: 1"
-        material="shader: flat; src: ${thumb}"
-        event-set__mouseenter="scale: 1.2 1.2 1; _target: #desc; _delay: 300; material.src: ${src}"
-        event-set__mouseleave="scale: 1 1 1; _target: #desc; _delay: 300; material.src: #none"
-        event-set__click="_target: #desc; _delay: 300; material.src: ${src}"
-        proxy-event="event: click; to: #desc; as: fade"></a-entity>
-    </script>
-
-    <!-- desc -->
-    <script id="desc" type="text/html">
-      <a-entity class="desc"
-        geometry="primitive: plane; height: 1; width: 2"></a-entity>
-    </script>
-  </head>
-  <body>
-    <a-scene>
-      <a-assets>
-        <img id="city" src="static/hongkong_small.jpg">
-        <img id="none" src="static/none.png">
-        <img id="city-desc" src="static/hongkong_desc.jpg">
-        <img id="city-thumb" src="static/thumb-city.jpg">
-
-      </a-assets>
-
-      <!-- 360-degree image. -->
-      <a-sky id="image-360" radius="10" src="#city"></a-sky>
-
-      <!-- Image links. -->
-      <a-entity id="links" layout="type: line; margin: 1.5" position="0 0 -4" rotation="0 0 0">
-        <a-entity template="src: #link" data-src="#city-desc" data-thumb="#city-thumb"></a-entity>
-      </a-entity>
-
-      <!-- Image links. -->
-      <a-entity id="descs" layout="type: line; margin: 1.5" position="0 -1.5 -4" rotation="0 0 0">
-        <a-image  id="desc" src="#none" width="2"></a-image>
-      </a-entity>
-
-      <!-- Camera + cursor. -->
-      <a-entity camera look-controls>
-        <a-cursor
-          id="cursor"
-          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
-          animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
-          event-set__mouseenter="_event: mouseenter; color: springgreen"
-          event-set__mouseleave="_event: mouseleave; color: black"
-          raycaster="objects: .link"></a-cursor>
-      </a-entity>
-    </a-scene>
-  </body>
+</a-scene>
+</body>
 </html>
