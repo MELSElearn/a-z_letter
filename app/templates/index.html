@@ -18,8 +18,12 @@
         console.log(markerId)
         if (markerId=="marker1")
         {
-           var entity = document.getElementById("sounda1");
-            entity.components.sound.playSound();
+            context.resume().then(() =>{
+                var entity = document.getElementById("sounda1");
+                entity.components.sound.playSound();
+
+            });
+           
         }
         if (markerId=="marker2")
         {
